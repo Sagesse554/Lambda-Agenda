@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AgendaProjet.ConfigureProfil"
+             Shell.NavBarIsVisible="False">
+
+
+    <ContentPage.Content>
+        <Grid
+            BackgroundColor="#1C375C"
+            HorizontalOptions="FillAndExpand"
+            VerticalOptions="FillAndExpand">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <StackLayout Grid.Row="0" HorizontalOptions="Center">
+                <Image
+                    Margin="0,30"
+                    Aspect="AspectFit"
+                    HeightRequest="100"
+                    Source="dotnet_bot.svg"
+                    WidthRequest="80" />
+            </StackLayout>
+            <Frame  VerticalOptions="Center"   HasShadow="True"
+                HeightRequest="700" Margin="0,150" >
+                <VerticalStackLayout Spacing="30" Margin="20" >
+                    <Button Text="Login" Clicked="btn_switch" 
+                            TextColor="White" Background="aqua"  FontSize="28"
+                             Margin="0,100,0,20"/>
+                    <Button Text="Sign up" 
+                            Clicked="btn_switch1" 
+                            TextColor="White" Background="aqua" FontSize="28"/>
+                    <Button Text="continue..." BackgroundColor="White" 
+                            Clicked="btn_switch2" TextColor="red" FontSize="28" 
+                            VerticalOptions="End" HorizontalOptions="End" Margin="0,150,0,0"/>
+
+                </VerticalStackLayout>
+            </Frame>
+
+        </Grid>
+    </ContentPage.Content>
+
+</ContentPage>

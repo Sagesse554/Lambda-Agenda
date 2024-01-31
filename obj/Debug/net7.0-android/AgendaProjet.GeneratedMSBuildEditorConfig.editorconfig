@@ -1,0 +1,123 @@
+is_global = true
+build_property.TargetFramework = net7.0-android
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = false
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.EnableAotAnalyzer = 
+build_property.EnableSingleFileAnalyzer = true
+build_property.EnableTrimAnalyzer = false
+build_property.IncludeAllContentForSelfExtract = 
+build_property.RootNamespace = AgendaProjet
+build_property.ProjectDir = C:\Users\Edemdaniel\Desktop\LICENCE_II\SEMESTRE 4\C#\LAMDA_Agenda\AgendaProjet\
+
+[C:/Users/Edemdaniel/Desktop/LICENCE_II/SEMESTRE 4/C\#/LAMDA_Agenda/AgendaProjet/App.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = AgendaProjet.App.xaml
+build_metadata.AdditionalFiles.TargetPath = App.xaml
+build_metadata.AdditionalFiles.RelativePath = App.xaml
+
+[C:/Users/Edemdaniel/Desktop/LICENCE_II/SEMESTRE 4/C\#/LAMDA_Agenda/AgendaProjet/AppShell.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = AgendaProjet.AppShell.xaml
+build_metadata.AdditionalFiles.TargetPath = AppShell.xaml
+build_metadata.AdditionalFiles.RelativePath = AppShell.xaml
+
+[C:/Users/Edemdaniel/Desktop/LICENCE_II/SEMESTRE 4/C\#/LAMDA_Agenda/AgendaProjet/Resources/Styles/Colors.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = AgendaProjet.Resources.Styles.Colors.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Colors.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Colors.xaml
+
+[C:/Users/Edemdaniel/Desktop/LICENCE_II/SEMESTRE 4/C\#/LAMDA_Agenda/AgendaProjet/Resources/Styles/Styles.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = AgendaProjet.Resources.Styles.Styles.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Styles.xaml
+
+[C:/Users/Edemdaniel/Desktop/LICENCE_II/SEMESTRE 4/C\#/LAMDA_Agenda/AgendaProjet/View/CalendarView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = AgendaProjet.View.CalendarView.xaml
+build_metadata.AdditionalFiles.TargetPath = View\CalendarView.xaml
+build_metadata.AdditionalFiles.RelativePath = View\CalendarView.xaml
+
+[C:/Users/Edemdaniel/Desktop/LICENCE_II/SEMESTRE 4/C\#/LAMDA_Agenda/AgendaProjet/View/CategorieEdit.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = AgendaProjet.View.CategorieEdit.xaml
+build_metadata.AdditionalFiles.TargetPath = View\CategorieEdit.xaml
+build_metadata.AdditionalFiles.RelativePath = View\CategorieEdit.xaml
+
+[C:/Users/Edemdaniel/Desktop/LICENCE_II/SEMESTRE 4/C\#/LAMDA_Agenda/AgendaProjet/View/CategorieList.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = AgendaProjet.View.CategorieList.xaml
+build_metadata.AdditionalFiles.TargetPath = View\CategorieList.xaml
+build_metadata.AdditionalFiles.RelativePath = View\CategorieList.xaml
+
+[C:/Users/Edemdaniel/Desktop/LICENCE_II/SEMESTRE 4/C\#/LAMDA_Agenda/AgendaProjet/View/ConfigureProfil.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = AgendaProjet.View.ConfigureProfil.xaml
+build_metadata.AdditionalFiles.TargetPath = View\ConfigureProfil.xaml
+build_metadata.AdditionalFiles.RelativePath = View\ConfigureProfil.xaml
+
+[C:/Users/Edemdaniel/Desktop/LICENCE_II/SEMESTRE 4/C\#/LAMDA_Agenda/AgendaProjet/View/Login.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = AgendaProjet.View.Login.xaml
+build_metadata.AdditionalFiles.TargetPath = View\Login.xaml
+build_metadata.AdditionalFiles.RelativePath = View\Login.xaml
+
+[C:/Users/Edemdaniel/Desktop/LICENCE_II/SEMESTRE 4/C\#/LAMDA_Agenda/AgendaProjet/View/MobileHome.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = AgendaProjet.View.MobileHome.xaml
+build_metadata.AdditionalFiles.TargetPath = View\MobileHome.xaml
+build_metadata.AdditionalFiles.RelativePath = View\MobileHome.xaml
+
+[C:/Users/Edemdaniel/Desktop/LICENCE_II/SEMESTRE 4/C\#/LAMDA_Agenda/AgendaProjet/View/NoteEdit.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = AgendaProjet.View.NoteEdit.xaml
+build_metadata.AdditionalFiles.TargetPath = View\NoteEdit.xaml
+build_metadata.AdditionalFiles.RelativePath = View\NoteEdit.xaml
+
+[C:/Users/Edemdaniel/Desktop/LICENCE_II/SEMESTRE 4/C\#/LAMDA_Agenda/AgendaProjet/View/NoteListView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = AgendaProjet.View.NoteListView.xaml
+build_metadata.AdditionalFiles.TargetPath = View\NoteListView.xaml
+build_metadata.AdditionalFiles.RelativePath = View\NoteListView.xaml
+
+[C:/Users/Edemdaniel/Desktop/LICENCE_II/SEMESTRE 4/C\#/LAMDA_Agenda/AgendaProjet/View/NoteView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = AgendaProjet.View.NoteView.xaml
+build_metadata.AdditionalFiles.TargetPath = View\NoteView.xaml
+build_metadata.AdditionalFiles.RelativePath = View\NoteView.xaml
+
+[C:/Users/Edemdaniel/Desktop/LICENCE_II/SEMESTRE 4/C\#/LAMDA_Agenda/AgendaProjet/View/Parametre.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = AgendaProjet.View.Parametre.xaml
+build_metadata.AdditionalFiles.TargetPath = View\Parametre.xaml
+build_metadata.AdditionalFiles.RelativePath = View\Parametre.xaml
+
+[C:/Users/Edemdaniel/Desktop/LICENCE_II/SEMESTRE 4/C\#/LAMDA_Agenda/AgendaProjet/View/Profile.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = AgendaProjet.View.Profile.xaml
+build_metadata.AdditionalFiles.TargetPath = View\Profile.xaml
+build_metadata.AdditionalFiles.RelativePath = View\Profile.xaml
+
+[C:/Users/Edemdaniel/Desktop/LICENCE_II/SEMESTRE 4/C\#/LAMDA_Agenda/AgendaProjet/View/SignIn.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = AgendaProjet.View.SignIn.xaml
+build_metadata.AdditionalFiles.TargetPath = View\SignIn.xaml
+build_metadata.AdditionalFiles.RelativePath = View\SignIn.xaml
+
+[C:/Users/Edemdaniel/Desktop/LICENCE_II/SEMESTRE 4/C\#/LAMDA_Agenda/AgendaProjet/View/TachEventEdit.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = AgendaProjet.View.TachEventEdit.xaml
+build_metadata.AdditionalFiles.TargetPath = View\TachEventEdit.xaml
+build_metadata.AdditionalFiles.RelativePath = View\TachEventEdit.xaml
+
+[C:/Users/Edemdaniel/Desktop/LICENCE_II/SEMESTRE 4/C\#/LAMDA_Agenda/AgendaProjet/View/TachEventList.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = AgendaProjet.View.TachEventList.xaml
+build_metadata.AdditionalFiles.TargetPath = View\TachEventList.xaml
+build_metadata.AdditionalFiles.RelativePath = View\TachEventList.xaml

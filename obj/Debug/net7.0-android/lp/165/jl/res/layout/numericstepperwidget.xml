@@ -1,0 +1,1 @@
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:gravity="right|center_vertical" xmlns:android="http://schemas.android.com/apk/res/android"><intersoft.crosslight.android.NumericStepper android:id="@+id/NumericStepper" android:layout_width="fill_parent" android:layout_height="wrap_content" /></RelativeLayout>

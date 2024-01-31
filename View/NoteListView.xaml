@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:Model="clr-namespace:AgendaProjet.Model"
+             xmlns:View="clr-namespace:AgendaProjet.View"
+             x:Class="AgendaProjet.View.NoteListView"
+             x:DataType="View:NoteListView"
+             Title="NoteListView">
+    
+    <ContentPage.Content>
+        <Grid RowDefinitions="*,Auto">
+            <ScrollView>
+                <StackLayout Margin="20">
+                    <Grid RowDefinitions="*, Auto">
+                        <CollectionView VerticalOptions="Fill"
+                        ItemsSource="{Binding NoteItems}"
+                        SelectionMode="Single"
+                        SelectionChanged="OnSelectionChanged">
+                            <CollectionView.ItemTemplate>
+                                <DataTemplate x:DataType="Model:NotesDef">
+                                    <VerticalStackLayout>
+                                        <Grid ColumnDefinitions="*,*"  Padding="5">
+                                            <Label Text="{Binding Intitule}" VerticalTextAlignment="Center" Grid.Column="0"
+                                               FontSize="18" FontFamily="Times New Roman" VerticalOptions="Center" HeightRequest="60" WidthRequest="150"/> 
+                                            <Label Text="{Binding Date}" VerticalTextAlignment="Center" Grid.Column="1"
+                                               FontSize="13" FontFamily="Times New Roman" VerticalOptions="CenterAndExpand" HeightRequest="60" WidthRequest="100"/>
+                                        </Grid>
+                                    </VerticalStackLayout>
+                                </DataTemplate>
+                            </CollectionView.ItemTemplate>
+                        </CollectionView>
+                    </Grid>
+                </StackLayout>
+            </ScrollView>
+            <Button Grid.Row="1" Text="Ajouter une Note" Clicked="OnNoteItemAdd" Margin="20" />
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

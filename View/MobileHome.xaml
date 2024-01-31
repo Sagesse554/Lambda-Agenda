@@ -1,0 +1,421 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AgendaProjet.View.MobileHome"
+             xmlns:Model="clr-namespace:AgendaProjet.Model"
+             xmlns:calendar="clr-namespace:AgendaProjet.View"
+             Shell.NavBarIsVisible="False"
+             Title="MobileHome">
+
+    <Grid>
+        <ContentView HorizontalOptions="FillAndExpand">
+            <Grid > 
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="30"/>
+                    <ColumnDefinition Width="*"/>
+                    
+                </Grid.ColumnDefinitions>
+ 
+                <StackLayout x:Name="panelRight" Grid.Column="0"
+                     WidthRequest="40"
+                     HorizontalOptions="Start"
+                     BackgroundColor="#222429">
+
+                   
+                        <Image Source="posting_icon.svg" 
+                   HeightRequest="30"
+                   WidthRequest="30"
+                   Margin="0,20,20,0"
+                   HorizontalOptions="StartAndExpand"
+                   >
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer  Tapped="TapGestureRecognizer_Tapped1" />
+                            </Image.GestureRecognizers>
+
+                        </Image>
+
+                        <Image Source="bookmark.png" 
+                   HeightRequest="30"
+                   WidthRequest="30"
+                   Margin="0,100,20,0"
+                   HorizontalOptions="Start"
+                   >
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer  Tapped="TapGestureRecognizer_Tapped2" />
+                            </Image.GestureRecognizers>
+
+                        </Image>
+                       
+                   
+                        
+
+
+                    <Image Source="listcheck.png" 
+                   HeightRequest="30"
+                   WidthRequest="30"
+                   Margin="0,40,20,0"
+                   HorizontalOptions="Start">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer  Tapped="TapGestureRecognizer_taches" />
+                        </Image.GestureRecognizers>
+
+                    </Image>
+
+
+                    <Image Source="bookopen.png" 
+                   HeightRequest="30"
+                   WidthRequest="30"
+                   Margin="0,40,20,0"
+                   HorizontalOptions="Start">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer  Tapped="TapGestureRecognizer_notebook" />
+                        </Image.GestureRecognizers>
+
+                    </Image>
+
+                    <Image Source="profil_icon.png" 
+                   HeightRequest="30"
+                   WidthRequest="30"
+                   Margin="0,40,20,0"
+                   HorizontalOptions="Start">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer  Tapped="TapGestureRecognizer_Tapped5" />
+                            </Image.GestureRecognizers>
+
+                        </Image>
+
+                    <Image Source="helping.svg" 
+                   HeightRequest="30"
+                   WidthRequest="30"
+                   Margin="0,40,20,0"
+                   HorizontalOptions="Start"
+                   >
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer  Tapped="TapGestureRecognizer_Tapped3" />
+                        </Image.GestureRecognizers>
+
+                    </Image>
+
+
+                    <Image Source="about.svg" 
+                   HeightRequest="30"
+                   WidthRequest="30"
+                   Margin="0,40,20,0"
+                   HorizontalOptions="Start"
+                   >
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer  Tapped="TapGestureRecognizer_Tapped4" />
+                        </Image.GestureRecognizers>
+
+                    </Image>
+
+
+
+                    <Image Source="settings.png" 
+                   HeightRequest="30"
+                   WidthRequest="30"
+                   Margin="0,0,20,20"
+                   
+                   VerticalOptions="EndAndExpand"            >
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer  Tapped="TapGestureRecognizer_Tapped6" />
+                            </Image.GestureRecognizers>
+
+                        </Image>
+                      
+
+                </StackLayout>
+
+                <ScrollView Grid.Column="1"
+                        HorizontalOptions="FillAndExpand"  >
+                    <StackLayout Padding="40" >
+
+                        <calendar:CalendarView x:Name="cal" />
+                        <VerticalStackLayout>
+                        </VerticalStackLayout>
+                    </StackLayout>
+                </ScrollView>
+              
+            </Grid>
+        </ContentView>
+
+        <StackLayout x:Name="panelLeft"
+                     WidthRequest="220"
+                     HorizontalOptions="Start"
+                     BackgroundColor="#222429">
+            
+            <HorizontalStackLayout Padding="0,20,0,0">
+                <Image Source="sst.png" 
+                   HeightRequest="30"
+                   WidthRequest="30"
+                   Margin="0,0,20,0"
+                   HorizontalOptions="Start"
+                   >
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer  Tapped="TapGestureRecognizer_Tapped1" />
+                    </Image.GestureRecognizers>
+
+                </Image>
+                <Label
+                     
+                HorizontalOptions="Center">
+                    <Label.FormattedText >
+                        <FormattedString>
+                           
+                            <Span Text="LAMDA AGENDA"
+                              TextColor="Khaki"
+                              FontAttributes="Bold"
+                              FontSize="18" 
+                              />
+                        </FormattedString>
+
+                    </Label.FormattedText>
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer  
+                        Tapped="TapGestureRecognizer_Tapped1"/>
+                    </Label.GestureRecognizers>
+
+                </Label>
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout Padding="0,100,0,0">
+                <Image Source="bookmark.png" 
+                   HeightRequest="30"
+                   WidthRequest="30"
+                   Margin="0,0,10,20"
+                   HorizontalOptions="Start"
+                   >
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer  Tapped="TapGestureRecognizer_Tapped2" />
+                    </Image.GestureRecognizers>
+
+                </Image>
+                <Label
+                HorizontalOptions="Center"
+              >
+                    <Label.FormattedText>
+                        <FormattedString>
+                            
+                            <Span Text="Categorie"
+                              TextColor="White"
+                              FontAttributes="Bold"
+                              FontSize="17"
+                              />
+                        </FormattedString>
+
+                    </Label.FormattedText>
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer  
+                        Tapped="TapGestureRecognizer_Tapped2"/>
+                    </Label.GestureRecognizers>
+
+                </Label>
+            </HorizontalStackLayout>
+            
+            <HorizontalStackLayout Padding="0,20,0,0">
+                <Image Source="listcheck.png" 
+                   HeightRequest="30"
+                   WidthRequest="30"
+                   Margin="0,0,10,20"
+                   HorizontalOptions="Start"
+                   >
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer  Tapped="TapGestureRecognizer_taches" />
+                    </Image.GestureRecognizers>
+
+                </Image>
+                <Label
+                HorizontalOptions="Center">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="Mes Taches"
+                              TextColor="White" FontAttributes="Bold"
+                              FontSize="17"/>
+
+                        </FormattedString>
+
+                    </Label.FormattedText>
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer  
+                        Tapped="TapGestureRecognizer_taches"/>
+                    </Label.GestureRecognizers>
+
+                </Label>
+            </HorizontalStackLayout>
+
+
+            <HorizontalStackLayout Padding="0,20,0,0">
+                <Image Source="bookopen.png" 
+                   HeightRequest="30"
+                   WidthRequest="30"
+                   Margin="0,0,10,20"
+                   HorizontalOptions="Start"
+                   >
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer  Tapped="TapGestureRecognizer_notebook" />
+                    </Image.GestureRecognizers>
+
+                </Image>
+                <Label
+                HorizontalOptions="Center">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="Notebook"
+                              TextColor="White" FontAttributes="Bold"
+                              FontSize="17"/>
+
+                        </FormattedString>
+
+                    </Label.FormattedText>
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer  
+                        Tapped="TapGestureRecognizer_notebook"/>
+                    </Label.GestureRecognizers>
+
+                </Label>
+            </HorizontalStackLayout>
+
+
+
+
+
+
+            <HorizontalStackLayout Padding="0,20,0,0">
+                <Image Source="profil_icon.png" 
+                   HeightRequest="30"
+                   WidthRequest="30"
+                   Margin="0,0,10,20"
+                   HorizontalOptions="Start"
+                   >
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer  Tapped="TapGestureRecognizer_Tapped5" />
+                    </Image.GestureRecognizers>
+
+                </Image>
+                <Label
+                HorizontalOptions="Center">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="Voir Profil"
+                              TextColor="White" FontAttributes="Bold"
+                              FontSize="17"/>
+                          
+                        </FormattedString>
+
+                    </Label.FormattedText>
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer  
+                        Tapped="TapGestureRecognizer_Tapped5"/>
+                    </Label.GestureRecognizers>
+
+                </Label>
+            </HorizontalStackLayout>
+
+
+            <HorizontalStackLayout Padding="0,20,0,0">
+                <Image Source="helping.svg" 
+                   HeightRequest="30"
+                   WidthRequest="30"
+                   Margin="0,0,10,20"
+                   HorizontalOptions="Start"
+                   >
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer  Tapped="TapGestureRecognizer_Tapped3" />
+                    </Image.GestureRecognizers>
+
+                </Image>
+                <Label
+                HorizontalOptions="Center"
+              >
+                    <Label.FormattedText>
+                        <FormattedString>
+
+                            <Span Text="Voir aide"
+                              TextColor="White"
+                              FontAttributes="Bold"
+                              FontSize="17"
+
+                              />
+                        </FormattedString>
+
+                    </Label.FormattedText>
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer  
+                        Tapped="TapGestureRecognizer_Tapped3"/>
+                    </Label.GestureRecognizers>
+
+                </Label>
+            </HorizontalStackLayout>
+            <HorizontalStackLayout Padding="0,20,0,0">
+                <Image Source="about.svg" 
+                   HeightRequest="30"
+                   WidthRequest="30"
+                   Margin="0,0,10,20"
+                   HorizontalOptions="Start"
+                   >
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer  Tapped="TapGestureRecognizer_Tapped4" />
+                    </Image.GestureRecognizers>
+
+                </Image>
+                <Label
+                HorizontalOptions="Center"
+              >
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="A propos"
+                              TextColor="White" FontAttributes="Bold"
+                               FontSize="17"
+/>
+
+                        </FormattedString>
+
+                    </Label.FormattedText>
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer  
+                        Tapped="TapGestureRecognizer_Tapped4"/>
+                    </Label.GestureRecognizers>
+
+                </Label>
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout Padding="0,20,0,0" VerticalOptions="EndAndExpand" HorizontalOptions="Start">
+                <Image Source="settings.png" 
+                   HeightRequest="30"
+                   WidthRequest="30"
+                   Margin="0,0,10,20"
+                   HorizontalOptions="Start"
+                   
+                   >
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer  Tapped="TapGestureRecognizer_Tapped6" />
+                    </Image.GestureRecognizers>
+
+                </Image>
+                <Label
+                HorizontalOptions="Center">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="Paramètres"
+                              TextColor="White" FontAttributes="Bold"
+                              FontSize="17"
+/>
+                            
+                        </FormattedString>
+
+                    </Label.FormattedText>
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer  
+                        Tapped="TapGestureRecognizer_Tapped6"/>
+                    </Label.GestureRecognizers>
+
+                </Label>
+            </HorizontalStackLayout>
+
+        </StackLayout>
+    
+    </Grid>
+</ContentPage>

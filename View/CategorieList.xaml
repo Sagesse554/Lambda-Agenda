@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:Model="clr-namespace:AgendaProjet.Model"
+             xmlns:View="clr-namespace:AgendaProjet.View"
+             x:Class="AgendaProjet.View.CategorieList"
+             x:DataType="View:CategorieList"
+             Title="CategorieList">
+    
+    <Grid RowDefinitions="*, Auto">
+
+        <CollectionView VerticalOptions="Fill"
+                        ItemsSource="{Binding Items}"
+                        SelectionMode="Single"
+                        SelectionChanged="OnSelectionChanged">
+            <CollectionView.ItemTemplate>
+                <DataTemplate x:DataType="Model:CategorieDef">
+                    <VerticalStackLayout HeightRequest="50" >
+                        <Grid RowDefinitions="*" ColumnDefinitions="*,*" RowSpacing="10" Padding="15">
+                            <Label Text="{Binding CategoryName}" VerticalTextAlignment="Center" Grid.Column="0"
+                                   FontSize="23" FontFamily="Times New Roman" VerticalOptions="Center"/>
+                            <Frame x:Name="ColorFrame" BackgroundColor="{Binding CategoryColor}" Grid.Column="1" HeightRequest="30" WidthRequest="30"
+                                   HorizontalOptions="End" CornerRadius="100"/>
+                        </Grid>
+                    </VerticalStackLayout>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+        <Button Grid.Row="1" Text="Ajouter une categorie" Clicked="OnItemAdd" Margin="20" />
+
+    </Grid>
+</ContentPage>

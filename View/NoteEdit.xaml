@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:Model="clr-namespace:AgendaProjet.Model"
+             xmlns:View="clr-namespace:AgendaProjet.View"
+             x:Class="AgendaProjet.View.NoteEdit"
+             x:DataType="Model:NotesDef"
+             Title="Take Notes noteEdit">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Margin="20">
+                <Label Text="Intitulé:" FontFamily="Times New Roman" FontSize="17" FontAttributes="Italic" />
+                <Entry x:Name="IntituleEntry" Text="{Binding Intitule}" Placeholder="Intitulé de la note" FontFamily="Times New Roman" FontSize="17"/>
+
+                <Label Text="Description:" FontFamily="Times New Roman" FontSize="17" FontAttributes="Italic"/>
+                <Editor x:Name="DescriptionEditor" Text="{Binding Description}" Placeholder="Description de la note" 
+                        HeightRequest="100" FontFamily="Times New Roman" FontSize="17"/>
+                
+                <Grid RowDefinitions="*" ColumnDefinitions="*,*">
+                    <Label Text="Note:" FontFamily="Times New Roman" FontSize="17" FontAttributes="Italic"/>
+                    <Label Text="{Binding Notation}" Grid.Column="1"/>
+                </Grid>
+                <Slider x:Name="NoteSlider" Maximum="10"  Minimum="0" Value="{Binding Notation}"/>
+                
+
+                <Label Text="Date:" FontFamily="Times New Roman" FontSize="17" FontAttributes="Italic"/>
+                <DatePicker x:Name="DatePicker" Date="{Binding Date}" FontFamily="Times New Roman" FontSize="17"/>
+
+                <Label Text="Heure:" FontFamily="Times New Roman" FontSize="17" FontAttributes="Italic"/>
+                <TimePicker x:Name="TimePicker" Time="{Binding Heure}" FontFamily="Times New Roman" FontSize="17"/>
+
+                <Label Text="Lieu:" FontFamily="Times New Roman" FontSize="17" FontAttributes="Italic"/>
+                <Entry x:Name="NoteLieu" Text="{Binding Lieu}" FontFamily="Times New Roman" FontSize="17"/>
+
+                <Label Text="Catégorie:" FontFamily="Times New Roman" FontSize="17" FontAttributes="Italic"/>
+                <Picker x:Name="CategoryPicker">
+                    <Picker.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnCategoryPickerTapped" />
+                        </Picker.GestureRecognizers>
+                    </Picker>
+                <Label x:Name="CategoryLabel" Text="{Binding Source={x:Reference CategorieList}, Path=SelectedCategoryName}" FontFamily="Times New Roman" FontSize="18" />
+
+                <HorizontalStackLayout HorizontalOptions="Center" Margin="45">
+                    <Button Text="Annuler" Margin="5" Clicked="OnCancelClicked" WidthRequest="110"/>
+                    <Button Text="Enregistrer" Margin="5" Clicked="OnSaveClicked" WidthRequest="110"/>
+                    <Button Text="Supprimer" Margin="5" BackgroundColor="DarkRed" IsVisible="{Binding IdNotes}" Clicked="OnDeleteClicked" WidthRequest="110" />
+
+                </HorizontalStackLayout>
+
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

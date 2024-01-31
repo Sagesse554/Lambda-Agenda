@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:Model="clr-namespace:AgendaProjet.Model"
+             xmlns:View="clr-namespace:AgendaProjet.View"
+             x:Class="AgendaProjet.View.CategorieEdit"
+             x:DataType="Model:CategorieDef"
+             Title="{Binding CategoryName}">
+    
+    <StackLayout Margin="20">
+        <Label Text="Creer une nouvelle categorie" FontFamily="Times New Roman" TextDecorations="Underline"
+               FontSize="25" FontAttributes="Italic" HorizontalTextAlignment="Center"/>
+
+        <Entry x:Name="CategoryEntry" Text="{Binding CategoryName}" Margin="20" Placeholder="Saisir l'intitule de la categrie"
+               FontFamily="Times New Roman" FontSize="23" TextColor="DarkRed" FontAttributes="Bold" Opacity="0.7"/>
+
+        <Frame x:Name="ColorFrame" BackgroundColor="{Binding CategoryColor}" HorizontalOptions="Center" WidthRequest="40" HeightRequest="40" />
+        
+        <Label Text="Selectionnez une couleur" FontFamily="Times New Roman" Margin="0,20,0,20"
+               FontSize="25" FontAttributes="Italic" HorizontalTextAlignment="Center"/>
+
+        <StackLayout HorizontalOptions="Center" Margin="0,0,0,30">
+                <HorizontalStackLayout>
+                    <Button x:Name="btn1" Clicked="DisplayColorPalette" BackgroundColor="Green"  WidthRequest="40" HeightRequest="40" Margin="5"/>
+                    <Button x:Name="btn2" Clicked="DisplayColorPalette" BackgroundColor="YellowGreen" WidthRequest="40" HeightRequest="40" Margin="5"/>
+                    <Button x:Name="btn3" Clicked="DisplayColorPalette" BackgroundColor="Gray"  WidthRequest="40" HeightRequest="40" Margin="5"/>
+                    <Button x:Name="btn4" Clicked="DisplayColorPalette" BackgroundColor="Yellow"  WidthRequest="40" HeightRequest="40" Margin="5" Opacity="0.7"/>
+                    <Button x:Name="btn5" Clicked="DisplayColorPalette" BackgroundColor="Blue"  WidthRequest="40" HeightRequest="40" Margin="5"/>
+                </HorizontalStackLayout>
+
+                <HorizontalStackLayout>
+                    <Button x:Name="btn6" Clicked="DisplayColorPalette" BackgroundColor="pink"  WidthRequest="40" HeightRequest="40" Margin="5"/>
+                    <Button x:Name="btn7" Clicked="DisplayColorPalette" BackgroundColor="Brown" WidthRequest="40" HeightRequest="40" Margin="5"/>
+                    <Button x:Name="btn8" Clicked="DisplayColorPalette" BackgroundColor="Turquoise" WidthRequest="40" HeightRequest="40" Margin="5"/>
+                    <Button x:Name="btn9" Clicked="DisplayColorPalette" BackgroundColor="Salmon" WidthRequest="40" HeightRequest="40" Margin="5"/>
+                    <Button x:Name="btn10" Clicked="DisplayColorPalette" BackgroundColor="orange" WidthRequest="40" HeightRequest="40" Margin="5"/>
+                </HorizontalStackLayout>
+
+                <HorizontalStackLayout>
+                    <Button x:Name="btn11" Clicked="DisplayColorPalette" BackgroundColor="Indigo"  WidthRequest="40" HeightRequest="40" Margin="5"/>
+                    <Button x:Name="btn12" Clicked="DisplayColorPalette" BackgroundColor="Chocolate" WidthRequest="40" HeightRequest="40" Margin="5"/>
+                    <Button x:Name="btn13" Clicked="DisplayColorPalette" BackgroundColor="DarkCyan"  WidthRequest="40" HeightRequest="40" Margin="5"/>
+                    <Button x:Name="btn14" Clicked="DisplayColorPalette" BackgroundColor="red"  WidthRequest="40" HeightRequest="40" Margin="5"/>
+                    <Button x:Name="btn15" Clicked="DisplayColorPalette" BackgroundColor="CornflowerBlue"  WidthRequest="40" HeightRequest="40" Margin="5"/>
+                </HorizontalStackLayout>
+
+        </StackLayout>
+            
+
+        <HorizontalStackLayout HorizontalOptions="Center" VerticalOptions="EndAndExpand" Margin="0,0,0,110">
+            <Button Text="Annuler" Margin="5" Clicked="OnCancelClicked" WidthRequest="110"/>
+            <Button Text="Creer" Margin="5" Clicked="OnSaveClicked" WidthRequest="110"/>
+            <Button Text="Supprimer" Margin="5" BackgroundColor="DarkRed" IsVisible="{Binding IdCatg}" Clicked="OnDeleteClicked" WidthRequest="110" />
+
+        </HorizontalStackLayout>
+        
+    </StackLayout>
+</ContentPage>

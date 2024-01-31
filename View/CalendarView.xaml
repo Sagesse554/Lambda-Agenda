@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+<StackLayout xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:Model="clr-namespace:AgendaProjet.Model"
+             xmlns:View="clr-namespace:AgendaProjet.View"
+             x:Name="this"
+             Spacing="10"
+             x:Class="AgendaProjet.View.CalendarView">
+
+    <Label Text="{Binding Source={x:Reference this},Path=SelectedDate,StringFormat='{0: MMMM dd yyyy}'}" FontSize="22" FontAttributes="Bold" HorizontalTextAlignment="Center"/>
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+        <Image Grid.Column="0" Source="left.png" HeightRequest="30"
+               WidthRequest="30" >
+            <Image.GestureRecognizers>
+                <TapGestureRecognizer Command="{Binding Source={x:Reference this},Path=PreviousMonthCommad}"/>
+            </Image.GestureRecognizers>
+        </Image>
+        
+        <Label Grid.Column="1" Text="{Binding Source={x:Reference this},Path=SelectedDate,StringFormat='{0: MMMM }'}" FontSize="22" FontAttributes="Bold" HorizontalTextAlignment="Center"/>
+
+        <Image Grid.Column="2" Source="rightt.png" HeightRequest="30"
+               WidthRequest="30" >
+            <Image.GestureRecognizers>
+                <TapGestureRecognizer Command="{Binding Source={x:Reference this},Path=NextMonthCommad}"/>
+            </Image.GestureRecognizers>
+        </Image>
+    </Grid>
+    
+    <CollectionView ItemsSource="{Binding Source={x:Reference this},Path=Dates}">
+        <CollectionView.ItemsLayout>
+            <LinearItemsLayout Orientation="Horizontal" ItemSpacing="10"/>
+        </CollectionView.ItemsLayout>
+        <CollectionView.ItemTemplate>
+            
+            <DataTemplate x:DataType="Model:CalendarModel">
+                <Border WidthRequest="80" Padding="15" >
+                    <VerticalStackLayout>
+                        <Label Text="{Binding Date,StringFormat='{0:ddd}'}" 
+                               FontSize="18" HorizontalTextAlignment="Center">
+                            
+                            <Label.Triggers>
+                                <DataTrigger TargetType="Label" Binding="{ Binding IsCurrentDate}" Value="True">
+                                    <Setter Property="TextColor" Value="White"/>
+                                </DataTrigger>
+                            </Label.Triggers>
+                        </Label>
+                        <Label Text="{Binding Date,StringFormat='{0:d }'}" 
+                               FontSize="24"  
+                               FontAttributes="Bold"
+                               HorizontalTextAlignment="Center">
+                            <Label.Triggers>
+                                <DataTrigger TargetType="Label" Binding="{ Binding IsCurrentDate}" Value="True">
+                                    <Setter Property="TextColor" Value="White"/>
+                                </DataTrigger>
+                            </Label.Triggers>
+                        </Label>
+                    </VerticalStackLayout> 
+                    <Border.Triggers>
+                        <DataTrigger TargetType="Border" Binding="{Binding IsCurrentDate}" Value="True">
+                            <Setter Property="Background" Value="LightBlue" />
+                        </DataTrigger>
+                        <DataTrigger TargetType="Border" Binding="{Binding IsCurrentDate}" Value="False">
+                            <Setter Property="Background" Value="Transparent" />
+                        </DataTrigger>
+                    </Border.Triggers>
+                    <Border.GestureRecognizers>
+
+                        <TapGestureRecognizer Command="{Binding Source={x:Reference this},Path=CurrentDateCommand}"
+                                              CommandParameter="{Binding .}"/>
+                    </Border.GestureRecognizers>
+                </Border>
+            </DataTemplate>
+        </CollectionView.ItemTemplate>
+    </CollectionView>
+
+
+    <Frame HeightRequest="95" BackgroundColor="CornflowerBlue">
+        <DatePicker x:Name="datePicker" FontSize="30" FontFamily="Times new Roman" TextColor="White" Format="dd dddd"
+                    HorizontalOptions="Center" DateSelected="LoadTachItemsForSelectedDate"/>
+    </Frame>
+
+    <ListView x:Name="taskListView">
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <StackLayout>
+                        <Label Text="{Binding Titre}" VerticalTextAlignment="Center" Grid.Column="0" WidthRequest="200"
+                               Padding="10" FontSize="18" FontFamily="Times New Roman" VerticalOptions="CenterAndExpand" HeightRequest="70"/>
+                        <Label Text="{Binding EventDate}" VerticalTextAlignment="Center" Grid.Column="1" 
+                               FontSize="13" FontFamily="Times New Roman" WidthRequest="80" HeightRequest="60"/>
+                    </StackLayout>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+    <Button Grid.Row="1" Text="Ajouter une Tache" Clicked="OnTachItemAdd" Margin="0,350,0,0" />
+
+</StackLayout>

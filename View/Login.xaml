@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:View="clr-namespace:AgendaProjet.View"
+             x:Class="AgendaProjet.Login"
+             Title="LoginUI"
+             BackgroundColor="#112B47">
+
+    <ContentPage.Content>
+        <StackLayout Padding="40" VerticalOptions="Center"
+                     HorizontalOptions="FillAndExpand">
+
+
+            <Image Source="profil_icon" WidthRequest="180"
+                   HeightRequest="180" Margin="0,0,0,65"></Image>
+            <Entry x:Name="txtEmail"  Placeholder="Email" TextColor="white" PlaceholderColor="Gray"></Entry>
+            <Entry x:Name="txtPassword" Placeholder="Password" IsPassword="True" TextColor="white" PlaceholderColor="Gray"></Entry>
+            <Button
+    VerticalOptions="Center"
+    Text="Login"
+    TextColor="White"
+     BackgroundColor="Transparent"
+    BorderWidth="1.5"
+         BorderColor="ForestGreen"        
+    CornerRadius="50"
+                Clicked="Button_clicked"></Button>
+
+            <Label
+                HorizontalOptions="Center"
+              >
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="Don't have an account"
+                              TextColor="Gray"/>
+                        <Span Text="Register"
+                              TextColor="Gray"
+                              FontAttributes="Bold" TextDecorations="Underline"
+                              />
+                    </FormattedString>
+
+                </Label.FormattedText>
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer  
+                        Tapped="TapGestureRecognizer_Tapped"/>
+                </Label.GestureRecognizers>
+
+            </Label>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

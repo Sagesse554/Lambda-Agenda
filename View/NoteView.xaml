@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:Model="clr-namespace:AgendaProjet.Model"
+             xmlns:View="clr-namespace:AgendaProjet.View"
+             x:Class="AgendaProjet.View.NoteView"
+             x:DataType="View:NoteListView"
+             Title="NoteView">
+    <StackLayout Margin="20">
+
+        <CollectionView VerticalOptions="Fill"
+                        ItemsSource="{Binding NoteItems}">
+            <CollectionView.ItemTemplate>
+                <DataTemplate x:DataType="Model:NotesDef">
+                    <VerticalStackLayout>
+                        <Label Text="Intitulé" FontAttributes="Bold" FontFamily="Times New Roman" FontSize="18"/>
+                        <Label x:Name="IntituleLabel" Text="{Binding Intitule}" FontFamily="Times New Roman" FontSize="18"/>
+
+                        <Label Text="Description" FontAttributes="Bold" FontFamily="Times New Roman" FontSize="18"/>
+                        <Label x:Name="DescriptionLabel" Text="{Binding Description}" FontFamily="Times New Roman" FontSize="18"/>
+
+                        <Label Text="Note" FontAttributes="Bold" FontFamily="Times New Roman" FontSize="18"/>
+                        <Label x:Name="NoteLabel" Text="{Binding Notation}" FontFamily="Times New Roman" FontSize="18"/>
+
+                        <Label Text="Date" FontAttributes="Bold" FontFamily="Times New Roman" FontSize="18"/>
+                        <Label x:Name="DateLabel" Text="{Binding Date}" FontFamily="Times New Roman" FontSize="18"/>
+
+                        <Label Text="Heure" FontAttributes="Bold" FontFamily="Times New Roman" FontSize="18"/>
+                        <Label x:Name="HeureLabel" Text="{Binding Heure}" FontFamily="Times New Roman" FontSize="18"/>
+
+                        <Label Text="Catégorie" FontAttributes="Bold" FontFamily="Times New Roman" FontSize="18"/>
+                        <Label x:Name="CategorieLabel" Text="{Binding CategoryId}" FontFamily="Times New Roman" FontSize="18"/>
+                    </VerticalStackLayout>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+        
+        <Button Text="Modifier" Clicked="EditButton_Clicked" Margin="10,20,10,0" FontFamily="Times New Roman"/>
+
+    </StackLayout>
+</ContentPage>
